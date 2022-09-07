@@ -1,6 +1,8 @@
 # Задача 62. Напишите программу,
 # которая заполнит спирально массив 4 на 4.
 
+from PrintMatrix import print2D
+
 n = int(input('Enter Maxtix size: '))
 
 
@@ -45,18 +47,5 @@ def fillmatrix(n):
     return matrix
 
 
-def printmatrix(matrix):
-    """
-    Функция вывода 2х - мерного массива в консоли.
-    :param matrix: - исходная матрица (массив)
-    :return: - ничего не возвращаем
-    """
-    print()
-    for i in range(len(matrix)):
-        for j in range(len(matrix[i])):
-            print(matrix[i][j], end=' ')
-        print()
-
-
 matrix = fillmatrix(n)
-printmatrix(matrix)
+print2D(matrix)

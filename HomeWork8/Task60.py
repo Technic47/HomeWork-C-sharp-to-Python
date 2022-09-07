@@ -4,6 +4,8 @@
 # добавляя индексы каждого элемента.
 import random
 
+from PrintMatrix import print3D
+
 n = int(input('Enter Maxtix N: '))
 m = int(input('Enter Maxtix M: '))
 p = int(input('Enter Maxtix P: '))
@@ -29,18 +31,5 @@ def creatematrix(n, m, p):
         matrix.append(a)
     return matrix
 
-
-def printmatrix3D(matrix):
-    """
-    Функция вывода 3х - мерного массива в консоли.
-    :param matrix: - исходная матрица (массив)
-    :return: - ничего не возвращаем
-    """
-    for i in range(n):
-        for j in range(m):
-            for k in range(p):
-                print(f'{matrix[i][j][k]} [{i}, {j}, {k}]')
-
-
 matrix = creatematrix(n, m, p)
-printmatrix3D(matrix)
+print3D(matrix)

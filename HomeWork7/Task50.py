@@ -4,10 +4,12 @@
 # что такого элемента нет.
 
 from random import randint
+from PrintMatrix import print2D
 
-matrix = [[randint(0, 10) for j in range(5)] for i in range(10)]
+matrix = [[randint(0, 9) for j in range(7)] for i in range(7)]
 
-print(matrix)
+print2D(matrix)
+
 print(len(matrix))  # количество строк
 print(len(matrix[0]))  # количество столбцов
 

@@ -2,7 +2,9 @@
 # которая будет находить произведение двух матриц.
 
 from random import randint
+from PrintMatrix import print2D
 import numpy as np
+
 
 n1 = int(input('Enter Maxtix A (X,..): '))
 m1 = int(input('Enter Maxtix A (..,Y): '))
@@ -17,19 +19,6 @@ matrix1 = [[randint(0, 9) for j in range(n1)] for i in range(m1)]
 matrix2 = [[randint(0, 9) for j in range(n2)] for i in range(m2)]
 a = np.array(matrix1)  # задание матрицы 1 для модуля numpy
 b = np.array(matrix2)  # задание матрицы 2 для модуля numpy
-
-
-def printmatrix(matrix):
-    """
-    Функция вывода 2х - мерного массива в консоли.
-    :param matrix: - исходная матрица (массив)
-    :return: - ничего не возвращаем
-    """
-    print()
-    for i in range(len(matrix)):
-        for j in range(len(matrix[i])):
-            print(matrix[i][j], end=' ')
-        print()
 
 
 def arraymultiplication(matrix1, matrix2):
@@ -57,10 +46,10 @@ def arraymultiplication(matrix1, matrix2):
     return matrix3
 
 
-printmatrix(matrix1)
-printmatrix(matrix2)
+print2D(matrix1)
+print2D(matrix2)
 matrix3 = arraymultiplication(matrix1, matrix2)
-printmatrix(matrix3)
+print2D(matrix3)
 print()
 total = a.dot(b)  # перемножение матриц, используя numpy
 print(total)

@@ -3,24 +3,12 @@
 # с наименьшей суммой элементов.
 
 from random import randint
+from PrintMatrix import print2D
 
 n = int(input('Enter N: '))
 m = int(input('Enter M: '))
 
 matrix = [[randint(0, 9) for j in range(n)] for i in range(m)]
-
-
-def printmatrix(matrix):
-    """
-    Функция вывода 2х - мерного массива в консоли.
-    :param matrix: - исходная матрица (массив)
-    :return: - ничего не возвращаем
-    """
-    print()
-    for i in range(len(matrix)):
-        for j in range(len(matrix[i])):
-            print(matrix[i][j], end=' ')
-        print()
 
 
 def sumline(matrix):
@@ -56,7 +44,7 @@ def minsum(sums):
     print(f'Index of min sum = {min} line is {index}.')
 
 
-printmatrix(matrix)
+print2D(matrix)
 print()
 sums = sumline(matrix)
 print()

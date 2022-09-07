@@ -3,23 +3,13 @@
 # элементы каждой строки двумерного массива.
 
 from random import randint
+from PrintMatrix import print2D
 
 n = int(input('Enter N: '))
 m = int(input('Enter M: '))
 
 matrix = [[randint(0, 9) for j in range(n)] for i in range(m)]
 
-def printmatrix(matrix):
-    """
-    Функция вывода 2х - мерного массива в консоли.
-    :param matrix: - исходная матрица (массив)
-    :return: - ничего не возвращаем
-    """
-    print()
-    for i in range(len(matrix)):
-        for j in range(len(matrix[i])):
-            print(matrix[i][j], end=' ')
-        print()
 
 def sortmatrix(matrix):
     """
@@ -30,8 +20,8 @@ def sortmatrix(matrix):
     for i in range(len(matrix)):
         matrix[i].sort(reverse=True)
 
-printmatrix(matrix)
+print2D(matrix)
 sortmatrix(matrix)
-printmatrix(matrix)
+print2D(matrix)
 
 
