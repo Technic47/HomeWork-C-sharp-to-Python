@@ -15,10 +15,16 @@ if (n1 != m2) or (n2 != m1):
 
 matrix1 = [[randint(0, 9) for j in range(n1)] for i in range(m1)]
 matrix2 = [[randint(0, 9) for j in range(n2)] for i in range(m2)]
-a = np.array(matrix1)
-b = np.array(matrix2)
+a = np.array(matrix1)  # задание матрицы 1 для модуля numpy
+b = np.array(matrix2)  # задание матрицы 2 для модуля numpy
+
 
 def printmatrix(matrix):
+    """
+    Функция вывода 2х - мерного массива в консоли.
+    :param matrix: - исходная матрица (массив)
+    :return: - ничего не возвращаем
+    """
     print()
     for i in range(len(matrix)):
         for j in range(len(matrix[i])):
@@ -27,6 +33,14 @@ def printmatrix(matrix):
 
 
 def arraymultiplication(matrix1, matrix2):
+    """
+    Функция перемножения 2х матриц.
+    Подгоняет размер результирующей исходя из
+    размеров матриц - множителей.
+    :param matrix1: - матрица множитель 1.
+    :param matrix2: - матрица множитель .
+    :return: - возвращает результирующую матрицу.
+    """
     n = len(matrix1)
     m = len(matrix2[0])
     matrix3 = [[0 for j in range(n)] for i in range(m)]
@@ -48,5 +62,5 @@ printmatrix(matrix2)
 matrix3 = arraymultiplication(matrix1, matrix2)
 printmatrix(matrix3)
 print()
-total = a.dot(b)
+total = a.dot(b)  # перемножение матриц, используя numpy
 print(total)

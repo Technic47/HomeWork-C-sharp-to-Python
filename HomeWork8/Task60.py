@@ -10,6 +10,14 @@ p = int(input('Enter Maxtix P: '))
 
 
 def creatematrix(n, m, p):
+    """
+    Функция генерирует 3х мерный массив
+    заполненный рандомными числами от 0 до 9
+    :param n: - количество строк
+    :param m: - количество столбцов
+    :param p: - количество 3их ячеек для 3Д массива
+    :return:  - возвращаем матрицу
+    """
     matrix = []
     for i in range(n):
         a = []
@@ -23,6 +31,11 @@ def creatematrix(n, m, p):
 
 
 def printmatrix3D(matrix):
+    """
+    Функция вывода 3х - мерного массива в консоли.
+    :param matrix: - исходная матрица (массив)
+    :return: - ничего не возвращаем
+    """
     for i in range(n):
         for j in range(m):
             for k in range(p):

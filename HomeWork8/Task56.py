@@ -11,13 +11,26 @@ matrix = [[randint(0, 9) for j in range(n)] for i in range(m)]
 
 
 def printmatrix(matrix):
+    """
+    Функция вывода 2х - мерного массива в консоли.
+    :param matrix: - исходная матрица (массив)
+    :return: - ничего не возвращаем
+    """
     print()
     for i in range(len(matrix)):
         for j in range(len(matrix[i])):
             print(matrix[i][j], end=' ')
         print()
 
+
 def sumline(matrix):
+    """
+    Функция суммирует каждую строчку матрицы - аргумента
+    и заносит сумму строки в ячейку массива sums[].
+    Выводит в консоль сумму элементов для каждой строки по индексу.
+    :param matrix: - матрица для обработки
+    :return: - возвращает массив с вычесленными суммами
+    """
     sums = []
     for i in range(len(matrix)):
         sum = 0
@@ -27,13 +40,21 @@ def sumline(matrix):
         sums.append(sum)
     return sums
 
+
 def minsum(sums):
+    """
+    Функция находит минимальное значение из массива
+    и выводит его в консоль.
+    :param sums: - массив для поиска
+    :return: - ничего не возвращаем
+    """
     min = sums[0]
     for i in range(len(sums)):
         if sums[i] < min:
             min = sums[i]
             index = i
     print(f'Index of min sum = {min} line is {index}.')
+
 
 printmatrix(matrix)
 print()
